@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url('./fonts/Helvetica.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(./img/beach_scene.JPG);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    font:  20px 'Helvetica';
+}
+.container {
+    background: #00817B;
+    width: 95%;
+    height: 100vh;
+    padding-top: 30vh;
+    box-shadow: 14px 0 0 rgba(0,0,0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+}
+.animate{
+    margin-left: -95%;
+    box-shadow: none;
+    -webkit-transition-property: all; 
+    transition-property: all;
+    -webkit-transition-duration: 2s; 
+    transition-duration: 2s;
+  }
+.title {
+    margin-left: 19vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.btn {
+    cursor: pointer;
+}
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80vw;
+    margin: 0 auto;
+    padding-bottom: 3vh;
+}
+.left_footer {
+    color: rgb(255, 255, 255);
+}
+.left_footer_horse{
+    margin-left: 15px;
+}
+.right_footer{
+    color: #FBAE17;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.right_footer_information {
+    margin-right: 30px;
+}
+
+.right_footer_information::before {
+    content: '';
+    height: 20px;
+    width: 2px;
+    background-color: #CCCCCC;
+    position: absolute;
+    right: -15px;
+    top: 7px;
+}
+.right_footer_information,.right_footer_references {
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+.right_footer_information:hover, .right_footer_references:hover{
+    color: #CCCCCC;
+    transition: 0.3s;
+}
+.text{
+    margin-right: 35px;
+}
+.calculation_table{
+    width: 30%;
+    margin-top: 10vh;
+    background: rgba(255, 255, 255, 0.5);
+    font-family: 'Pacifico', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+table {
+    width: 70%;
+    margin: auto;
+}
+input{
+    outline: none;
+}
+input:invalid {
+    border-color: rgba(255, 0, 0, 1);
+    color: rgba(255, 0, 0, 1);
+    box-shadow: none;
+}
+td{
+    text-align: right;
+    width: 50%;
+}
+.td_left{
+    text-align: left;
+}
+.data {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media (max-width:1500px) {
+    .title {
+        margin:0 auto;
+        width: 800px;
+    }
+    .text{
+        width: 80%;
+    }
+    .btn{
+        width: 15%;
+    }
+    .calculation_table{
+        width: 80%;
+        font-size: 30px;
+    }
+    input {
+        height: 30px;
+        font-size: 20px;
+    }
+    }
